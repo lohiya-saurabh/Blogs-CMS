@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .info-1 {
+    max-width: 70%
+  }
+}
+
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    .info-1 {
+      max-width: 50px
+    }
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
